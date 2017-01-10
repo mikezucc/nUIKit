@@ -1,7 +1,8 @@
 # nUIKit
 UIKit for Swift 3 on Linux
 
-How to Run:
+## How to Run:
+
 1. Donwload prebuilts https://swift.org/download/ or build from source https://github.com/apple/swift
 2. Clone this Repo
 3. in top level, run `swift build`
