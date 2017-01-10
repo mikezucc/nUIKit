@@ -9,4 +9,4 @@ https://github.com/twostraws/SwiftGD
 2. Clone this Repo
 3. In top level, run `swift build`
 4. Previous command should output a build path like `Linking /home/honey/Documents/nUIKit/.build/debug/nUIKit`
-5. paste build i.e. `honey@honey-MacBookPro:~/Documents/nUIKit$ ./.build/debug/nUIKit
+5. paste build i.e. `honey@honey-MacBookPro:~/Documents/nUIKit$ ./.build/debug/nUIKit`

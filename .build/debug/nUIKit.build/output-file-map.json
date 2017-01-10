@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/master.swiftdeps"
+  },
+  "/home/honey/Documents/nUIKit/Sources/main.swift": {
+    "dependencies": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/main.d",
+    "object": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/main.swift.o",
+    "swiftmodule": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/main~partial.swiftmodule",
+    "swift-dependencies": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/main.swiftdeps"
+  }
+}

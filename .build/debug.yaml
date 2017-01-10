@@ -1,0 +1,47 @@
+client:
+  name: swift-build
+tools: {}
+targets:
+  "test": ["<swiftgd.module>","<nUIKit.module>","<nUIKit.exe>"]
+  "main": ["<swiftgd.module>","<nUIKit.module>","<nUIKit.exe>"]
+default: "main"
+commands: 
+  "<swiftgd.module>":
+    tool: swift-compiler
+    executable: "/home/honey/swift3/usr/bin/swiftc"
+    module-name: "swiftgd"
+    module-output-path: "/home/honey/Documents/nUIKit/.build/debug/swiftgd.swiftmodule"
+    inputs: ["<Cgd.module>"]
+    outputs: ["<swiftgd.module>","/home/honey/Documents/nUIKit/.build/debug/swiftgd.build/swiftgd.swift.o"]
+    import-paths: ["/home/honey/Documents/nUIKit/.build/debug"]
+    temps-path: "/home/honey/Documents/nUIKit/.build/debug/swiftgd.build"
+    objects: ["/home/honey/Documents/nUIKit/.build/debug/swiftgd.build/swiftgd.swift.o"]
+    other-args: ["-j8","-D","SWIFT_PACKAGE","-Onone","-g","-enable-testing","-Xcc","-fmodule-map-file=/home/honey/Documents/nUIKit/Packages/Cgd-0.1.0/module.modulemap","-Xcc","-I/usr/include","-L/usr/lib/x86_64-linux-gnu","-lgd","-module-cache-path","/home/honey/Documents/nUIKit/.build/debug/ModuleCache"]
+    sources: ["/home/honey/Documents/nUIKit/Packages/swiftgd-1.0.0/Sources/swiftgd.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: "8"
+
+  "<nUIKit.module>":
+    tool: swift-compiler
+    executable: "/home/honey/swift3/usr/bin/swiftc"
+    module-name: "nUIKit"
+    module-output-path: "/home/honey/Documents/nUIKit/.build/debug/nUIKit.swiftmodule"
+    inputs: ["<Cgd.module>","<swiftgd.module>"]
+    outputs: ["<nUIKit.module>","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/main.swift.o"]
+    import-paths: ["/home/honey/Documents/nUIKit/.build/debug"]
+    temps-path: "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build"
+    objects: ["/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/main.swift.o"]
+    other-args: ["-j8","-D","SWIFT_PACKAGE","-Onone","-g","-enable-testing","-Xcc","-fmodule-map-file=/home/honey/Documents/nUIKit/Packages/Cgd-0.1.0/module.modulemap","-Xcc","-I/usr/include","-L/usr/lib/x86_64-linux-gnu","-lgd","-module-cache-path","/home/honey/Documents/nUIKit/.build/debug/ModuleCache"]
+    sources: ["/home/honey/Documents/nUIKit/Sources/main.swift"]
+    is-library: false
+    enable-whole-module-optimization: false
+    num-threads: "8"
+
+  "<nUIKit.exe>":
+    tool: shell
+    description: "Linking ./.build/debug/nUIKit"
+    inputs: ["/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/main.swift.o","/home/honey/Documents/nUIKit/.build/debug/swiftgd.build/swiftgd.swift.o"]
+    outputs: ["<nUIKit.exe>","/home/honey/Documents/nUIKit/.build/debug/nUIKit"]
+    args: ["/home/honey/swift3/usr/bin/swiftc","-Xlinker","-rpath=$ORIGIN","-g","-L/home/honey/Documents/nUIKit/.build/debug","-o","/home/honey/Documents/nUIKit/.build/debug/nUIKit","-emit-executable","-Xcc","-I/usr/include","-L/usr/lib/x86_64-linux-gnu","-lgd","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/main.swift.o","/home/honey/Documents/nUIKit/.build/debug/swiftgd.build/swiftgd.swift.o"]
+
