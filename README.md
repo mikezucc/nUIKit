@@ -23,7 +23,7 @@ http://www.pyimagesearch.com/2015/06/22/install-opencv-3-0-and-python-2-7-on-ubu
 
 # Runtime Structure
 
-Swift is the runtime for creating rendered views which OpenCV 3 Python 2.7 is in charge of displaying and mediating interaction
+Swift runs separately from python which will be the display and interaction. One can fail and the other will continue. Need to run the shell from the swift main.
 
 window.py creates the window upon which all `Application`s are rendered to using OpenCV
 
