@@ -11,6 +11,8 @@ In terminal, `nano ~/.bashrc` and paste at the end `export PATH=~/swift3/usr/bin
 
 If you have trouble, go to the Linux section on here https://swift.org/download/#using-downloads
 
+If you get SwiftGD faults when trying to read local files, i.e. images, please run this in top level `sudo chmod -R +r *` and also in the top level of your swift3 dir
+
 https://github.com/twostraws/SwiftGD
 
 This guy needs a `sudo apt-get libgd-dev`
