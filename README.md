@@ -13,6 +13,8 @@ If you have trouble, go to the Linux section on here https://swift.org/download/
 
 https://github.com/twostraws/SwiftGD
 
+This guy needs a `sudo apt-get libgd-dev`
+
 https://github.com/Itseez/opencv
 
 ### OpenCV 3.0.0 install instructions
