@@ -8,12 +8,12 @@ class ViewController {
 
   var view: View?
 
-  func init(view: View) {
+  init(view: View) {
     self.view = view
   }
 
-  func showMe() -> Image {
-    return view.ignite()
+  func ignite() -> Image? {
+    return view?.ignite()
   }
 
 }

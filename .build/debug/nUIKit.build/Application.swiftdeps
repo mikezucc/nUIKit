@@ -1,0 +1,125 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Application"
+provides-nominal:
+- "C6nUIKit11Application"
+provides-member:
+- ["C6nUIKit11Application", ""]
+depends-top-level:
+- "AssignmentPrecedence"
+- "IntegerLiteralType"
+- !private "Dictionary"
+- "nCGRect"
+- "FloatLiteralType"
+- "Application"
+- "String"
+- "Window"
+depends-member:
+- ["Ps9AnyObject", "String"]
+- ["Ps9AnyObject", "Window"]
+- !private ["Ps9AnyObject", "ignite"]
+- !private ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "nCGRect"]
+- !private ["Ps9AnyObject", "windowSize"]
+- !private ["Ps9AnyObject", "windows"]
+- ["Ps9AnyObject", ""]
+- ["C6nUIKit11Application", "String"]
+- ["C6nUIKit11Application", "Window"]
+- ["C6nUIKit11Application", "deinit"]
+- ["C6nUIKit11Application", "init"]
+- ["C6nUIKit11Application", "nCGRect"]
+- ["C6nUIKit11Application", "windowSize"]
+- ["C6nUIKit11Application", "windows"]
+- !private ["Ps10Collection", "Key"]
+- !private ["Ps10Collection", "Value"]
+- ["Ps10Collection", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "Key"]
+- !private ["Ps28CustomDebugStringConvertible", "Value"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps17CustomReflectable", "Key"]
+- !private ["Ps17CustomReflectable", "Value"]
+- ["Ps17CustomReflectable", "init"]
+- !private ["Ps23CustomStringConvertible", "Key"]
+- !private ["Ps23CustomStringConvertible", "Value"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Vs10Dictionary", "Key"]
+- !private ["Vs10Dictionary", "Value"]
+- ["Vs10Dictionary", "deinit"]
+- ["Vs10Dictionary", "init"]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "Key"]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "Value"]
+- ["Ps30ExpressibleByDictionaryLiteral", "init"]
+- !private ["Ps9Indexable", "Key"]
+- !private ["Ps9Indexable", "Value"]
+- ["Ps9Indexable", "init"]
+- !private ["Ps13IndexableBase", "Key"]
+- !private ["Ps13IndexableBase", "Value"]
+- ["Ps13IndexableBase", "init"]
+- ["Si", "deinit"]
+- !private ["Ps8Sequence", "Key"]
+- !private ["Ps8Sequence", "Value"]
+- ["Ps8Sequence", "init"]
+- ["SS", "deinit"]
+- ["C6nUIKit6Window", "deinit"]
+- !private ["C6nUIKit6Window", "ignite"]
+- !private ["C6nUIKit6Window", "init"]
+- !private ["P10Foundation12_CFBridgable", "Key"]
+- !private ["P10Foundation12_CFBridgable", "Value"]
+- ["P10Foundation12_CFBridgable", "init"]
+- !private ["P10Foundation12_NSBridgable", "Key"]
+- !private ["P10Foundation12_NSBridgable", "Value"]
+- ["P10Foundation12_NSBridgable", "init"]
+- !private ["P10Foundation17_ObjectBridgeable", "Key"]
+- !private ["P10Foundation17_ObjectBridgeable", "Value"]
+- ["P10Foundation17_ObjectBridgeable", "init"]
+- !private ["P10Foundation21_ObjectTypeBridgeable", "Key"]
+- !private ["P10Foundation21_ObjectTypeBridgeable", "Value"]
+- ["P10Foundation21_ObjectTypeBridgeable", "init"]
+- ["V6nUIKit7nCGRect", "deinit"]
+- ["V6nUIKit7nCGRect", "init"]
+depends-nominal:
+- "Ps9AnyObject"
+- "C6nUIKit11Application"
+- "Ps10Collection"
+- "Ps28CustomDebugStringConvertible"
+- "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "Vs10Dictionary"
+- "Ps30ExpressibleByDictionaryLiteral"
+- "Ps9Indexable"
+- "Ps13IndexableBase"
+- "Si"
+- "Ps8Sequence"
+- "SS"
+- "C6nUIKit6Window"
+- "P10Foundation12_CFBridgable"
+- "P10Foundation12_NSBridgable"
+- "P10Foundation17_ObjectBridgeable"
+- "P10Foundation21_ObjectTypeBridgeable"
+- "V6nUIKit7nCGRect"
+depends-dynamic-lookup:
+depends-external:
+- "/home/honey/swift3/usr/lib/swift/linux/x86_64/Swift.swiftmodule"
+- "/home/honey/swift3/usr/lib/swift/shims/Visibility.h"
+- "/home/honey/swift3/usr/lib/swift/shims/SwiftStdint.h"
+- "/home/honey/swift3/usr/lib/swift/shims/UnicodeShims.h"
+- "/home/honey/swift3/usr/lib/swift/shims/SwiftStddef.h"
+- "/home/honey/swift3/usr/lib/swift/shims/LibcShims.h"
+- "/home/honey/swift3/usr/lib/swift/shims/RuntimeStubs.h"
+- "/home/honey/swift3/usr/lib/swift/shims/RuntimeShims.h"
+- "/home/honey/swift3/usr/lib/swift/shims/RefCount.h"
+- "/home/honey/swift3/usr/lib/swift/shims/HeapObject.h"
+- "/home/honey/swift3/usr/lib/swift/shims/GlobalObjects.h"
+- "/home/honey/swift3/usr/lib/swift/shims/FoundationShims.h"
+- "/home/honey/swift3/usr/lib/swift/shims/DispatchShims.h"
+- "/home/honey/swift3/usr/lib/swift/shims/CoreFoundationShims.h"
+- "/home/honey/Documents/nUIKit/Packages/Cgd-0.1.0/module.modulemap"
+- "/home/honey/swift3/usr/lib/swift/linux/x86_64/glibc.modulemap"
+- "/home/honey/swift3/usr/lib/swift/shims/module.modulemap"
+- "/home/honey/swift3/usr/lib/swift/linux/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/home/honey/swift3/usr/lib/swift/linux/x86_64/Foundation.swiftmodule"
+- "/home/honey/swift3/usr/lib/swift/linux/x86_64/Dispatch.swiftmodule"
+- "/home/honey/swift3/usr/lib/swift/dispatch/module.modulemap"
+- "/home/honey/swift3/usr/lib/swift/linux/x86_64/Glibc.swiftmodule"
+- "/home/honey/Documents/nUIKit/.build/debug/swiftgd.swiftmodule"
+interface-hash: "ed07911e620a6f4fefbd5f39e3f3a058"

@@ -28,12 +28,12 @@ commands:
     module-name: "nUIKit"
     module-output-path: "/home/honey/Documents/nUIKit/.build/debug/nUIKit.swiftmodule"
     inputs: ["<Cgd.module>","<swiftgd.module>"]
-    outputs: ["<nUIKit.module>","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/main.swift.o"]
+    outputs: ["<nUIKit.module>","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/ViewController.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Window.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/main.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/InitialViewController.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/View.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Application.swift.o"]
     import-paths: ["/home/honey/Documents/nUIKit/.build/debug"]
     temps-path: "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build"
-    objects: ["/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/main.swift.o"]
+    objects: ["/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/ViewController.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Window.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/main.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/InitialViewController.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/View.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Application.swift.o"]
     other-args: ["-j8","-D","SWIFT_PACKAGE","-Onone","-g","-enable-testing","-Xcc","-fmodule-map-file=/home/honey/Documents/nUIKit/Packages/Cgd-0.1.0/module.modulemap","-Xcc","-I/usr/include","-L/usr/lib/x86_64-linux-gnu","-lgd","-module-cache-path","/home/honey/Documents/nUIKit/.build/debug/ModuleCache"]
-    sources: ["/home/honey/Documents/nUIKit/Sources/main.swift"]
+    sources: ["/home/honey/Documents/nUIKit/Sources/ViewController.swift","/home/honey/Documents/nUIKit/Sources/Window.swift","/home/honey/Documents/nUIKit/Sources/main.swift","/home/honey/Documents/nUIKit/Sources/InitialViewController.swift","/home/honey/Documents/nUIKit/Sources/View.swift","/home/honey/Documents/nUIKit/Sources/Application.swift"]
     is-library: false
     enable-whole-module-optimization: false
     num-threads: "8"
@@ -41,7 +41,7 @@ commands:
   "<nUIKit.exe>":
     tool: shell
     description: "Linking ./.build/debug/nUIKit"
-    inputs: ["/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/main.swift.o","/home/honey/Documents/nUIKit/.build/debug/swiftgd.build/swiftgd.swift.o"]
+    inputs: ["/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/ViewController.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Window.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/main.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/InitialViewController.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/View.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Application.swift.o","/home/honey/Documents/nUIKit/.build/debug/swiftgd.build/swiftgd.swift.o"]
     outputs: ["<nUIKit.exe>","/home/honey/Documents/nUIKit/.build/debug/nUIKit"]
-    args: ["/home/honey/swift3/usr/bin/swiftc","-Xlinker","-rpath=$ORIGIN","-g","-L/home/honey/Documents/nUIKit/.build/debug","-o","/home/honey/Documents/nUIKit/.build/debug/nUIKit","-emit-executable","-Xcc","-I/usr/include","-L/usr/lib/x86_64-linux-gnu","-lgd","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/main.swift.o","/home/honey/Documents/nUIKit/.build/debug/swiftgd.build/swiftgd.swift.o"]
+    args: ["/home/honey/swift3/usr/bin/swiftc","-Xlinker","-rpath=$ORIGIN","-g","-L/home/honey/Documents/nUIKit/.build/debug","-o","/home/honey/Documents/nUIKit/.build/debug/nUIKit","-emit-executable","-Xcc","-I/usr/include","-L/usr/lib/x86_64-linux-gnu","-lgd","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/ViewController.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Window.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/main.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/InitialViewController.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/View.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Application.swift.o","/home/honey/Documents/nUIKit/.build/debug/swiftgd.build/swiftgd.swift.o"]
 

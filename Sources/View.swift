@@ -5,10 +5,10 @@ import Dispatch
 import swiftgd
 
 struct nCGRect {
-  var x: Double = 0
-  var y: Double = 0
-  var width: Double = 0
-  var height: Double = 0
+  var x: Int = 0
+  var y: Int = 0
+  var width: Int = 0
+  var height: Int = 0
 }
 
 class View {
@@ -17,9 +17,13 @@ class View {
   var subviews = [View]()
 
   var frame = nCGRect()
-  var backgroundColor = Color.white()
+  var backgroundColor = Color.white
 
-  func init(x: Double, y: Double, width: Double, height: Double) {
+  let possibleColors = [Color.red, Color.green, Color.blue, Color.black, Color.white]
+  var idxColors = 0
+  var currIdx = 0
+
+  init(x: Int, y: Int, width: Int, height: Int) {
     frame.x = x
     frame.y = y
     frame.width = width
@@ -31,21 +35,29 @@ class View {
   }
 
   // subclasses of view
-  func ignite() -> Image {
-    let masterImage = Image(width: frame.width, height: frame.height)
-    masterImage.fill(from: Point(x: 0, y: 0), color: self.backgroundColor)
-    for view in subviews {
-      let renderedSubview = view.ignite()
-      let usableBoundWidth = frame.width - view.frame.x
-      let usableBoundHeight = frame.height - view.frame.y
-      for x in 0...usableBoundWidth {
-        for y in 0...usableBoundHeight {
-          let pixelColor = renderedSubview.get(pixel: Point(x: x, y: y))
-          masterImage.set(pixel: Point(x: x + view.frame.x, y: y + view.frame.y), to: pixelColor)
+  func ignite() -> Image? {
+    self.backgroundColor = self.possibleColors[idxColors]
+    self.idxColors = (self.idxColors + 1) % self.possibleColors.count
+    self.currIdx = (self.currIdx + 10) % self.frame.width
+    self.frame.x = self.currIdx
+    if let masterImage = Image(width: frame.width, height: frame.height) {
+      masterImage.fill(from: Point(x: 0, y: 0), color: self.backgroundColor)
+      for view in subviews {
+        if let renderedSubview = view.ignite() {
+          let usableBoundWidth = frame.width - view.frame.x
+          let usableBoundHeight = frame.height - view.frame.y
+          for x in 0...usableBoundWidth {
+            for y in 0...usableBoundHeight {
+              let pixelColor = renderedSubview.get(pixel: Point(x: x, y: y))
+              masterImage.set(pixel: Point(x: x + view.frame.x, y: y + view.frame.y), to: pixelColor)
+            }
+          }
         }
       }
+      return masterImage
     }
-    return masterImage
+
+    return nil
   }
 
 }

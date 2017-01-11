@@ -1,0 +1,56 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ViewController"
+provides-nominal:
+- "C6nUIKit14ViewController"
+provides-member:
+- ["C6nUIKit14ViewController", ""]
+depends-top-level:
+- "AssignmentPrecedence"
+- "ViewController"
+- "Image"
+- "View"
+depends-member:
+- !private ["Ps9AnyObject", "ignite"]
+- !private ["Ps9AnyObject", "view"]
+- ["Ps9AnyObject", ""]
+- ["Sq", "deinit"]
+- ["C6nUIKit4View", "deinit"]
+- !private ["C6nUIKit4View", "ignite"]
+- ["C6nUIKit14ViewController", "Image"]
+- ["C6nUIKit14ViewController", "View"]
+- ["C6nUIKit14ViewController", "deinit"]
+- ["C6nUIKit14ViewController", "ignite"]
+- ["C6nUIKit14ViewController", "init"]
+- ["C6nUIKit14ViewController", "view"]
+depends-nominal:
+- "Ps9AnyObject"
+- "Sq"
+- "C6nUIKit4View"
+- "C6nUIKit14ViewController"
+depends-dynamic-lookup:
+depends-external:
+- "/home/honey/swift3/usr/lib/swift/linux/x86_64/Swift.swiftmodule"
+- "/home/honey/swift3/usr/lib/swift/shims/Visibility.h"
+- "/home/honey/swift3/usr/lib/swift/shims/SwiftStdint.h"
+- "/home/honey/swift3/usr/lib/swift/shims/UnicodeShims.h"
+- "/home/honey/swift3/usr/lib/swift/shims/SwiftStddef.h"
+- "/home/honey/swift3/usr/lib/swift/shims/LibcShims.h"
+- "/home/honey/swift3/usr/lib/swift/shims/RuntimeStubs.h"
+- "/home/honey/swift3/usr/lib/swift/shims/RuntimeShims.h"
+- "/home/honey/swift3/usr/lib/swift/shims/RefCount.h"
+- "/home/honey/swift3/usr/lib/swift/shims/HeapObject.h"
+- "/home/honey/swift3/usr/lib/swift/shims/GlobalObjects.h"
+- "/home/honey/swift3/usr/lib/swift/shims/FoundationShims.h"
+- "/home/honey/swift3/usr/lib/swift/shims/DispatchShims.h"
+- "/home/honey/swift3/usr/lib/swift/shims/CoreFoundationShims.h"
+- "/home/honey/Documents/nUIKit/Packages/Cgd-0.1.0/module.modulemap"
+- "/home/honey/swift3/usr/lib/swift/linux/x86_64/glibc.modulemap"
+- "/home/honey/swift3/usr/lib/swift/shims/module.modulemap"
+- "/home/honey/swift3/usr/lib/swift/linux/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/home/honey/swift3/usr/lib/swift/linux/x86_64/Foundation.swiftmodule"
+- "/home/honey/swift3/usr/lib/swift/linux/x86_64/Dispatch.swiftmodule"
+- "/home/honey/swift3/usr/lib/swift/dispatch/module.modulemap"
+- "/home/honey/swift3/usr/lib/swift/linux/x86_64/Glibc.swiftmodule"
+- "/home/honey/Documents/nUIKit/.build/debug/swiftgd.swiftmodule"
+interface-hash: "274080b297c83f5a64b18652fe35d80e"

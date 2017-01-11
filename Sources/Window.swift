@@ -9,51 +9,69 @@ class Window {
   // window name
   var identity = "Application"
   let currentDirectory = URL(fileURLWithPath: FileManager().currentDirectoryPath)
-  var displayBuffer = ""
+  var displayBuffer: URL?
 
   // top most view controller should be in the back
   var controllers = [ViewController]()
-  var windowSize = CGSize(width: 0, height: 0)
+  var windowSize = nCGRect(x: 0, y: 0, width: 0, height: 0)
+
+  let initialController = InitialViewController()
+  let initialController2 = InitialViewController()
 
   // only this one is done async, rest of ignites are done sync
   func ignite() {
-    DispatchQueue.main.async {
-      while true {
-        let masterImage = Image(width: windowSize.width, height: windowSize.height)
-        for view in subviews {
-          let renderedSubview = view.ignite()
-          let usableBoundWidth = frame.width - view.frame.x
-          let usableBoundHeight = frame.height - view.frame.y
-          for x in 0...usableBoundWidth {
-            for y in 0...usableBoundHeight {
-              let pixelColor = renderedSubview.get(pixel: Point(x: x, y: y))
-              masterImage.set(pixel: Point(x: x + view.frame.x, y: y + view.frame.y), to: pixelColor)
+    print("** IGNITING FOR WINDOW: \(identity)")
+    while true {
+      if let masterImage = Image(width: self.windowSize.width, height: self.windowSize.height) {
+        print("Generate clean frame buffer")
+        for controller in self.controllers {
+          print("\t\tloading controller \(controller)")
+          if let view = controller.view {
+            print("\t\tBegin render for view \(view)")
+            if let renderedSubview = controller.ignite() {
+              let usableBoundWidth = self.windowSize.width - view.frame.x
+              let usableBoundHeight = self.windowSize.height - view.frame.y
+              print("\t\tIgnited view \(view) with bounds \(usableBoundWidth) x \(usableBoundHeight) from point \(view.frame.x)")
+              for x in 0...usableBoundWidth {
+                for y in 0...usableBoundHeight {
+                  let pixelColor = renderedSubview.get(pixel: Point(x: x, y: y))
+                  masterImage.set(pixel: Point(x: x + view.frame.x, y: y + view.frame.y), to: pixelColor)
+                }
+              }
             }
           }
         }
-        masterImage.write(to: displayBuffer)
-        // pause for 300ms
-        usleep(1000 * 300)
+        if let buffer = self.displayBuffer {
+          print("\tWriting frame buffer")
+          masterImage.write(to: buffer)
+        }
       }
+      print("\tEnd frame buffer")
+      // pause for 300ms
+      usleep(1000 * 300)
     }
   }
 
-  func init(identity: String, size: CGSize) {
-    shell("python window.py", identity, "\(size.width)", "\(size.height)")
-    windowSize = size
+  init(identity: String, rect: nCGRect) {
+    shell(path: "python window.py", name: identity, arg1: "\(rect.width)", arg2: "\(rect.height)")
+    self.windowSize = rect
     self.identity = identity
-    displayBuffer = currentDirectory.appendingPathComponent("\(identity).jpeg")
+    self.displayBuffer = currentDirectory.appendingPathComponent("\(identity).jpeg")
+    self.controllers.append(self.initialController)
+    self.initialController2.view?.frame.y = 300
+    self.controllers.append(self.initialController2)
   }
 
   // http://stackoverflow.com/a/26973384
   @discardableResult
-  func shell(_ args: String...) -> Int32 {
-      let task = Process()
-      task.launchPath = "/usr/bin/env"
-      task.arguments = args
-      task.launch()
-      task.waitUntilExit()
-      return task.terminationStatus
+  func shell(path: String, name: String, arg1: String, arg2: String) {
+    let task = Task()
+    task.launchPath = path
+    task.arguments = [name, arg1, arg2]
+
+    let pipe = Pipe()
+    task.standardOutput = pipe
+    task.launch()
   }
 
 }

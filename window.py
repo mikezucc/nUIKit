@@ -6,11 +6,11 @@ import sys
 
 loadImage = True
 
-identity = "Application"
-width = 50
-height = 50
+identity = "Hackweek"
+width = 400
+height = 400
 print sys.argv
-if len(sys.argv) >= 1:
+if len(sys.argv) >= 2:
     identity = sys.argv[1]
     width = sys.argv[2]
     height = sys.argv[3]
@@ -27,14 +27,14 @@ while (loadImage):
             continue
         height, width = img.shape[:2]
         if width > 0:
-            cv2.imshow('runna',img)
+            cv2.imshow(identity,img)
             print "read image"
             try:
                 os.remove(identity + ".jpeg")
             except:
                 print "failed to remove image </3"
         time.sleep(0.1)
-        cv2.waitKey(1)
+        cv2.waitKey(100)
     except:
         print "nException </3"
         time.sleep(0.1)

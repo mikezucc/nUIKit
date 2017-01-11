@@ -8,13 +8,11 @@ class Application {
 
   var windows = [String: Window]()
 
-  let windowSize = CGSize(width: 400, height: 400)
+  let windowSize = nCGRect(x:0, y:0, width: 400, height: 400)
 
-  let initialController = InitialViewController()
-
-  func init(name: String) {
-    let window = Window(identity: name, size: windowSize)
-    windows.append(window)
+  init?(name: String) {
+    let window = Window(identity: name, rect: windowSize)
+    windows = [name: window]
     window.ignite()
   }
 

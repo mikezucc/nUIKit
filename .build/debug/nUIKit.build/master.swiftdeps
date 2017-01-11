@@ -1,5 +1,10 @@
 version: "Swift version 3.0.2 (swift-3.0.2-RELEASE)"
 options: "dc4c8f55245e5825a9e992a7de810c29"
-build_time: [537400109, 712932000]
+build_time: [537413664, 127768000]
 inputs:
-  "/home/honey/Documents/nUIKit/Sources/main.swift": [537400106, 0]
+  "/home/honey/Documents/nUIKit/Sources/ViewController.swift": [537409563, 0]
+  "/home/honey/Documents/nUIKit/Sources/Window.swift": [537413609, 0]
+  "/home/honey/Documents/nUIKit/Sources/main.swift": [537410649, 0]
+  "/home/honey/Documents/nUIKit/Sources/InitialViewController.swift": [537413420, 0]
+  "/home/honey/Documents/nUIKit/Sources/View.swift": [537413439, 0]
+  "/home/honey/Documents/nUIKit/Sources/Application.swift": [537410827, 0]
