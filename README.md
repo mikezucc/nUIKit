@@ -3,6 +3,10 @@ UIKit for Swift 3 on Linux
 
 Dependencies:
 
+Python 2.7 plus random packages
+
+https://swift.org/download/ or https://github.com/apple/swift
+
 https://github.com/twostraws/SwiftGD
 
 https://github.com/Itseez/opencv
@@ -13,11 +17,9 @@ http://www.pyimagesearch.com/2015/06/22/install-opencv-3-0-and-python-2-7-on-ubu
 
 ## How to Run:
 
-1. Donwload prebuilts https://swift.org/download/ or build from source https://github.com/apple/swift
-2. Clone this Repo
-3. In top level, run `swift build`
-4. Previous command should output a build path like `Linking /home/honey/Documents/nUIKit/.build/debug/nUIKit`
-5. paste build to run i.e. `$ ./.build/debug/nUIKit`
+1. In top level, run `swift build`
+2. Previous command should output a build path like `Linking /home/honey/Documents/nUIKit/.build/debug/nUIKit`
+3. paste build to run i.e. `$ ./.build/debug/nUIKit`
 
 # Runtime Structure
 
