@@ -4,40 +4,6 @@ import Glibc
 import Dispatch
 import swiftgd
 
-let player = ["rock", "paper", "scissors", "lizard", "spock"]
-
-srandom(UInt32(NSDate().timeIntervalSince1970))
-for count in 1...3 {
-  DispatchQueue.main.async {
-    print(count)
-  }
-  sleep(1)
-}
-
-func shell(launchPath: String, arguments: [String]) -> String
-{
-  let task = Task()
-  task.launchPath = launchPath
-  task.arguments = arguments
-
-  let pipe = Pipe()
-  task.standardOutput = pipe
-  task.launch()
-
-  let data = pipe.fileHandleForReading.readDataToEndOfFile()
-  // NSUTF8StringEncoding
-  guard let output: String = String(data: data, encoding: String.Encoding(rawValue: 4)) else {
-    return "-1"
-  }
-
-  return output
-}
-
-print(player[random() % player.count])
-
-let currentDirectory = URL(fileURLWithPath: FileManager().currentDirectoryPath)
-let destination = currentDirectory.appendingPathComponent("memes2.jpeg")
-
 // attempt to create a new 500x500 image
 let image = Image(width: 500, height: 500)
 var rVal: Double = 0

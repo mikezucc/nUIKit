@@ -2,13 +2,24 @@ import numpy as np
 import cv2
 import time
 import os
+import sys
 
 loadImage = True
-cv2.namedWindow('runna', cv2.WINDOW_NORMAL)
+
+identity = "Application"
+width = 50
+height = 50
+print sys.argv
+if len(sys.argv) >= 1:
+    identity = sys.argv[1]
+    width = sys.argv[2]
+    height = sys.argv[3]
+
+cv2.namedWindow(identity, cv2.WINDOW_NORMAL)
 
 while (loadImage):
     try:
-        img = cv2.imread('memes2.jpeg',1)
+        img = cv2.imread(identity + '.jpeg', 1)
         print type(img)
         if type(img) is None:
             time.sleep(0.1)
@@ -19,11 +30,12 @@ while (loadImage):
             cv2.imshow('runna',img)
             print "read image"
             try:
-                os.remove("memes2.jpeg")
+                os.remove(identity + ".jpeg")
             except:
-                print "failed to remove image"
+                print "failed to remove image </3"
         time.sleep(0.1)
         cv2.waitKey(1)
     except:
+        print "nException </3"
         time.sleep(0.1)
         cv2.waitKey(100)
