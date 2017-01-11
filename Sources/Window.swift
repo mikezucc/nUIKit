@@ -55,15 +55,13 @@ class Window {
         }
       }
       print("\tEnd frame buffer")
-      // pause for 300ms
-      usleep(1000 * 300)
   }
 
   func touched(point: Point) {
-    if self.phase == .None {
-      self.phase = .Started
-    } else if self.phase == .Started {
+    if self.phase == .Started {
       self.phase = .Moving
+    } else if self.phase == .None {
+      self.phase = .Started
     }
 
     self.lastKnownPoint = Point(x: point.x, y: point.y)
@@ -77,11 +75,12 @@ class Window {
       }
       if let view = controller.view {
       // > x v y  coordinate system
-        if view.frame.x >= point.x && view.frame.y >= point.y && point.x  <= view.frame.width + view.frame.x && point.y <= view.frame.height + view.frame.y {
+        print("\tPerforming bounds test \(view.frame.x) vs \(point.x)")
+        if view.frame.x <= point.x && view.frame.y <= point.y && point.x  <= view.frame.width + view.frame.x && point.y <= view.frame.height + view.frame.y {
           if self.phase == .Started {
-            controller.touchBegan(point: Point(x: view.frame.x - point.x, y: view.frame.y - point.y ))
+            controller.touchBegan(point: Point(x: point.x, y: point.y ))
           } else if self.phase == .Moving {
-            controller.touchMoved(point: Point(x: view.frame.x - point.x, y: view.frame.y - point.y ))
+            controller.touchMoved(point: Point(x: point.x, y: point.y ))
           }
         }
       }
@@ -97,8 +96,10 @@ class Window {
       }
       if let view = controller.view {
       // > x v y  coordinate system
-        if view.frame.x >= self.lastKnownPoint.x && view.frame.y >= self.lastKnownPoint.y && self.lastKnownPoint.x  <= view.frame.width + view.frame.x && self.lastKnownPoint.y <= view.frame.height + view.frame.y {
-          controller.touchEnded(point: Point(x: view.frame.x - self.lastKnownPoint.x, y: view.frame.y - self.lastKnownPoint.y ))
+        print("\tPerforming bounds test")
+        if view.frame.x <= self.lastKnownPoint.x && view.frame.y <= self.lastKnownPoint.y && self.lastKnownPoint.x <= view.frame.width + view.frame.x && self.lastKnownPoint.y <= view.frame.height + view.frame.y {
+          print("\n\tTouch in \(controller)")
+          controller.touchEnded(point: Point(x: self.lastKnownPoint.x, y: self.lastKnownPoint.y ))
         }
       }
     }

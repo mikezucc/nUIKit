@@ -25,13 +25,14 @@ class ViewController {
 extension ViewController {
 
   func touchBegan(point: Point) {
-    guard let view = self.view else {
+    print("touch began")
+    guard let _ = self.view else {
       return
     }
-    view.frame.x = view.frame.x - 20
-    view.frame.y = view.frame.y - 20
-    view.frame.width = view.frame.width + 40
-    view.frame.height = view.frame.height + 40
+    //view.frame.x = view.frame.x - 20
+    //view.frame.y = view.frame.y - 20
+    //view.frame.width = view.frame.width + 40
+    //view.frame.height = view.frame.height + 40
     self.lastTouch = Point(x: point.x, y: point.y)
     self.view?.backgroundColor = Color.green
   }
@@ -40,10 +41,12 @@ extension ViewController {
     guard let view = self.view else {
       return
     }
-    view.frame.x = view.frame.x + (lastTouch.x - point.x)
-    view.frame.y = view.frame.y + (lastTouch.y - point.y)
+    print("\tmouse pos is \(point.x)")
+    print("\tmouse diff is \(point.x - lastTouch.x)")
+    view.frame.x = view.frame.x + (point.x - lastTouch.x)
+    view.frame.y = view.frame.y + (point.y - lastTouch.y)
     self.lastTouch = Point(x: point.x, y: point.y)
-    self.view?.backgroundColor = Color.black
+    self.view?.backgroundColor = Color.red
   }
 
   func touchEnded(point: Point) {

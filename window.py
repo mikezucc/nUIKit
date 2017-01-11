@@ -10,14 +10,14 @@ refPoint = [-1,-1]
 touchdown = False
 
 def mouse_left(event, x, y, flags, param):
-    global refPt, touchdown
+    global refPoint, touchdown
 
     if event == cv2.EVENT_LBUTTONDOWN:
         print "click"
         refPoint = [x, y]
         touchdown = True
     elif event == cv2.EVENT_MOUSEMOVE:
-        print "move"
+        #print "move"
         refPoint = [x, y]
     elif event == cv2.EVENT_LBUTTONUP:
         print "lift"
@@ -38,26 +38,31 @@ cv2.setMouseCallback(identity, mouse_left)
 
 here = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
 
+bufferFile = os.path.join(here, identity + '.txt')
+
 while (loadImage):
     try:
         # capture cursor info
         if touchdown:
+            print refPoint[0]
             if refPoint[0] > -1:
-                pointerBuffer = open(os.path.join(here, identity + '.jpg'), 'w')
+                pointerBuffer = open(bufferFile, 'w')
                 #f.seek(0)
-                pointerBuffer.write(str(refPoint[0]) + "," + str(refPoint[1] + ","))
+                pointerBufferString = str(refPoint[0]) + "," + str(refPoint[1]) + ","
+                pointerBuffer.write(pointerBufferString)
                 pointerBuffer.close()
-        refPoint = [-1, -1]
+        else:
+            os.remove(bufferFile)
     except:
         print "gesture exception"
 
     try:
 
         img = cv2.imread(identity + '.jpeg', 1)
-        print type(img)
+        #print type(img)
         if type(img) is None:
-            time.sleep(0.1)
-            cv2.waitKey(100)
+            time.sleep(0.05)
+            cv2.waitKey(50)
             continue
         height, width = img.shape[:2]
         if width > 0:
@@ -68,9 +73,9 @@ while (loadImage):
             except:
                 print "failed to remove image </3"
 
-        time.sleep(0.1)
-        cv2.waitKey(100)
+        time.sleep(0.05)
+        cv2.waitKey(50)
     except:
-        print "nException </3"
-        time.sleep(0.1)
-        cv2.waitKey(100)
+        #print "nException </3"
+        time.sleep(0.05)
+        cv2.waitKey(50)
