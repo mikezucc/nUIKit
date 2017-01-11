@@ -29,7 +29,7 @@ window.py creates the window upon which all `Application`s are rendered to using
 
 `Application` is created with a `Window`
 
-`Window` is created with an InitialViewController of type `ViewController`, `Window` can have array of top level `ViewController`s
+`Window` is created with an InitialViewController of type `ViewController`, `Window` can have array of top level `ViewController`s (extends past UIWindow constraint)
 
 `ViewController` has a main View, and can own an array of child `ViewController`
 
