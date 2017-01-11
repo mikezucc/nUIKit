@@ -17,6 +17,7 @@ class View {
   var subviews = [View]()
 
   var frame = nCGRect()
+  var backgroundColor = Color.white()
 
   func init(x: Double, y: Double, width: Double, height: Double) {
     frame.x = x
@@ -32,6 +33,7 @@ class View {
   // subclasses of view
   func ignite() -> Image {
     let masterImage = Image(width: frame.width, height: frame.height)
+    masterImage.fill(from: Point(x: 0, y: 0), color: self.backgroundColor)
     for view in subviews {
       let renderedSubview = view.ignite()
       let usableBoundWidth = frame.width - view.frame.x

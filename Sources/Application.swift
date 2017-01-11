@@ -10,6 +10,8 @@ class Application {
 
   let windowSize = CGSize(width: 400, height: 400)
 
+  let initialController = InitialViewController()
+
   func init(name: String) {
     let window = Window(identity: name, size: windowSize)
     windows.append(window)

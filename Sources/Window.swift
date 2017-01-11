@@ -32,6 +32,8 @@ class Window {
           }
         }
         masterImage.write(to: displayBuffer)
+        // pause for 300ms
+        usleep(1000 * 300)
       }
     }
   }
