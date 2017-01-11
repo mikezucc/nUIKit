@@ -35,4 +35,10 @@ window.py creates the window upon which all `Application`s are rendered to using
 
 ## Render loop
 
-`Application` calls `ignite()` on its main `Window`. Window's `ignite()` calls the `ignite()` of the top level `ViewController`s. This begins a recursive ignition loop on that `ViewController`s `view`by having it ask each of it's subviews to `ignite()` as well. This returns the rendered `Image` for that particular top level view controller. The Window then combines all of the top level `ViewController`s rendered `Image`s into one `Image`. The `Image` is then written to a buffer file with the application name `Hackweek.jpeg`. 
+1. `Application` calls `ignite()` on its main `Window`
+2. Window's `ignite()` calls the `ignite()` of the top level `ViewController`s
+3. This begins a recursive ignition loop on that `ViewController`s `view`by having it ask each of it's subviews to `ignite()` as well 
+4. This returns the rendered `Image` for that particular top level view controller 
+5. The Window then combines all of the top level `ViewController`s rendered `Image`s into one `Image`
+6. The `Image` is then written to a buffer file with the application name `Hackweek.jpeg`. 
+7. Python `window.py` displays it to cv named window
