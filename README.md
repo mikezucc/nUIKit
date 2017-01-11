@@ -7,6 +7,8 @@ Python 2.7 plus random packages
 
 https://swift.org/download/ or https://github.com/apple/swift
 
+In terminal, `nano ~/.bashrc` and paste at the end `export PATH=~/swift3/usr/bin/:"${PATH}" in pwd first`. Make sure to copy the Swift 3 directory to `~/` first and then rename the top level folder to swift3
+
 https://github.com/twostraws/SwiftGD
 
 https://github.com/Itseez/opencv
