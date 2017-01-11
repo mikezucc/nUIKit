@@ -10,18 +10,18 @@ provides-member:
 - ["C6nUIKit14ViewController", "touchEnded"]
 - ["C6nUIKit14ViewController", "thisIsMyTouch"]
 depends-top-level:
-- "Image"
 - !private "-"
+- "ViewController"
+- !private "+"
 - "Point"
+- !private "Color"
+- "Image"
+- !private "IntegerLiteralType"
+- "View"
 - "BooleanLiteralType"
 - !private "FloatLiteralType"
-- "ViewController"
-- !private "IntegerLiteralType"
-- "Bool"
-- !private "Color"
 - "AssignmentPrecedence"
-- !private "+"
-- "View"
+- "Bool"
 depends-member:
 - !private ["Ps9AnyObject", "Color"]
 - !private ["Ps9AnyObject", "Point"]
@@ -36,17 +36,17 @@ depends-member:
 - !private ["Ps9AnyObject", "view"]
 - ["Ps9AnyObject", ""]
 - ["Sb", "deinit"]
-- !private ["C7swiftgd5Color", "black"]
-- !private ["C7swiftgd5Color", "blue"]
-- ["C7swiftgd5Color", "deinit"]
-- !private ["C7swiftgd5Color", "green"]
+- !private ["C7SwiftGD5Color", "black"]
+- !private ["C7SwiftGD5Color", "blue"]
+- ["C7SwiftGD5Color", "deinit"]
+- !private ["C7SwiftGD5Color", "green"]
 - ["SQ", "deinit"]
 - ["Si", "deinit"]
 - ["Sq", "deinit"]
-- ["V7swiftgd5Point", "deinit"]
-- !private ["V7swiftgd5Point", "init"]
-- !private ["V7swiftgd5Point", "x"]
-- !private ["V7swiftgd5Point", "y"]
+- ["V7SwiftGD5Point", "deinit"]
+- !private ["V7SwiftGD5Point", "init"]
+- !private ["V7SwiftGD5Point", "x"]
+- !private ["V7SwiftGD5Point", "y"]
 - !private ["C6nUIKit4View", "backgroundColor"]
 - ["C6nUIKit4View", "deinit"]
 - !private ["C6nUIKit4View", "frame"]
@@ -73,11 +73,11 @@ depends-member:
 depends-nominal:
 - "Ps9AnyObject"
 - "Sb"
-- "C7swiftgd5Color"
+- "C7SwiftGD5Color"
 - "SQ"
 - "Si"
 - "Sq"
-- "V7swiftgd5Point"
+- "V7SwiftGD5Point"
 - "C6nUIKit4View"
 - "C6nUIKit14ViewController"
 - !private "V6nUIKit7nCGRect"
@@ -105,5 +105,5 @@ depends-external:
 - "/home/honey/swift3/usr/lib/swift/linux/x86_64/Dispatch.swiftmodule"
 - "/home/honey/swift3/usr/lib/swift/dispatch/module.modulemap"
 - "/home/honey/swift3/usr/lib/swift/linux/x86_64/Glibc.swiftmodule"
-- "/home/honey/Documents/nUIKit/.build/debug/swiftgd.swiftmodule"
-interface-hash: "d6362a9f7b581de724b42dbc66632a70"
+- "/home/honey/Documents/nUIKit/.build/debug/SwiftGD.swiftmodule"
+interface-hash: "5a13f06c5dde5828492113432e421c6d"

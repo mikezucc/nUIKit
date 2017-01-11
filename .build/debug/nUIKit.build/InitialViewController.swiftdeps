@@ -6,13 +6,13 @@ provides-nominal:
 provides-member:
 - ["C6nUIKit21InitialViewController", ""]
 depends-top-level:
-- "AssignmentPrecedence"
-- "FloatLiteralType"
-- "InitialViewController"
-- "IntegerLiteralType"
-- "ViewController"
-- !private "StringLiteralType"
 - "View"
+- !private "StringLiteralType"
+- "ViewController"
+- "IntegerLiteralType"
+- "InitialViewController"
+- "FloatLiteralType"
+- "AssignmentPrecedence"
 depends-member:
 - ["Ps9AnyObject", "View"]
 - ["Ps9AnyObject", "ViewController"]
@@ -99,5 +99,5 @@ depends-external:
 - "/home/honey/swift3/usr/lib/swift/linux/x86_64/Dispatch.swiftmodule"
 - "/home/honey/swift3/usr/lib/swift/dispatch/module.modulemap"
 - "/home/honey/swift3/usr/lib/swift/linux/x86_64/Glibc.swiftmodule"
-- "/home/honey/Documents/nUIKit/.build/debug/swiftgd.swiftmodule"
-interface-hash: "1318ca805e36cc2a4c3b611586592a53"
+- "/home/honey/Documents/nUIKit/.build/debug/SwiftGD.swiftmodule"
+interface-hash: "2393b0dda7bd55ea3bef1d11f69c05ed"

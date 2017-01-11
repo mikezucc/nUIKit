@@ -6,23 +6,23 @@ provides-nominal:
 provides-member:
 - ["C6nUIKit11Application", ""]
 depends-top-level:
-- "IntegerLiteralType"
-- "String"
+- !private "StringLiteralType"
 - !private "??"
-- "AssignmentPrecedence"
-- !private "BooleanLiteralType"
-- "FloatLiteralType"
 - !private ">"
-- !private "UnicodeScalarType"
-- !private "Point"
+- "String"
 - !private "Dictionary"
 - "nCGRect"
+- !private "BooleanLiteralType"
 - "Window"
-- !private "StringLiteralType"
 - !private "Int"
+- "FloatLiteralType"
 - "FileManager"
 - "Application"
+- !private "UnicodeScalarType"
 - "URL"
+- "IntegerLiteralType"
+- !private "Point"
+- "AssignmentPrecedence"
 depends-member:
 - ["Ps9AnyObject", "FileManager"]
 - !private ["Ps9AnyObject", "Int"]
@@ -304,8 +304,8 @@ depends-member:
 - ["P10Foundation16NSObjectProtocol", "currentDirectoryPath"]
 - ["P10Foundation16NSObjectProtocol", "init"]
 - ["Sq", "deinit"]
-- ["V7swiftgd5Point", "deinit"]
-- !private ["V7swiftgd5Point", "init"]
+- ["V7SwiftGD5Point", "deinit"]
+- !private ["V7SwiftGD5Point", "init"]
 - !private ["Ps22RandomAccessCollection", "Index"]
 - !private ["Ps22RandomAccessCollection", "IndexDistance"]
 - !private ["Ps22RandomAccessCollection", "Indices"]
@@ -573,7 +573,7 @@ depends-nominal:
 - "C10Foundation8NSObject"
 - "P10Foundation16NSObjectProtocol"
 - "Sq"
-- "V7swiftgd5Point"
+- "V7SwiftGD5Point"
 - !private "Ps22RandomAccessCollection"
 - !private "Ps21RandomAccessIndexable"
 - !private "Vs17RandomAccessSlice"
@@ -643,5 +643,5 @@ depends-external:
 - "/home/honey/swift3/usr/lib/swift/linux/x86_64/Dispatch.swiftmodule"
 - "/home/honey/swift3/usr/lib/swift/dispatch/module.modulemap"
 - "/home/honey/swift3/usr/lib/swift/linux/x86_64/Glibc.swiftmodule"
-- "/home/honey/Documents/nUIKit/.build/debug/swiftgd.swiftmodule"
-interface-hash: "123bd6ab94aab0aa46eeb7c320dbb6fe"
+- "/home/honey/Documents/nUIKit/.build/debug/SwiftGD.swiftmodule"
+interface-hash: "40fed10ff296b4f079a16209a202ff2c"

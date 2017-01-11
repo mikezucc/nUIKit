@@ -2,7 +2,7 @@
 import Foundation
 import Glibc
 import Dispatch
-import swiftgd
+import SwiftGD
 
 class ViewController {
 

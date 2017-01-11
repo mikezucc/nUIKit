@@ -9,19 +9,19 @@ provides-member:
 - ["V6nUIKit7nCGRect", ""]
 - ["C6nUIKit4View", ""]
 depends-top-level:
-- !private "..."
-- !private "+"
-- "Int"
-- "IntegerLiteralType"
-- "Array"
-- !private "Point"
-- "FloatLiteralType"
 - "View"
 - "Image"
-- !private "-"
-- "AssignmentPrecedence"
-- "Color"
+- "Int"
+- "Array"
+- "IntegerLiteralType"
 - "nCGRect"
+- "Color"
+- "FloatLiteralType"
+- !private "..."
+- !private "+"
+- !private "Point"
+- "AssignmentPrecedence"
+- !private "-"
 depends-member:
 - ["Ps9AnyObject", "Color"]
 - !private ["Ps9AnyObject", "Image"]
@@ -71,12 +71,12 @@ depends-member:
 - !private ["Ps10Collection", "_Element"]
 - !private ["Ps10Collection", "append"]
 - ["Ps10Collection", "init"]
-- ["C7swiftgd5Color", "black"]
-- ["C7swiftgd5Color", "blue"]
-- ["C7swiftgd5Color", "deinit"]
-- ["C7swiftgd5Color", "green"]
-- ["C7swiftgd5Color", "red"]
-- ["C7swiftgd5Color", "white"]
+- ["C7SwiftGD5Color", "black"]
+- ["C7SwiftGD5Color", "blue"]
+- ["C7SwiftGD5Color", "deinit"]
+- ["C7SwiftGD5Color", "green"]
+- ["C7SwiftGD5Color", "red"]
+- ["C7SwiftGD5Color", "white"]
 - !private ["Ps10Comparable", "IntegerLiteralType"]
 - !private ["Ps10Comparable", "Stride"]
 - !private ["Ps10Comparable", "_DisabledRangeIndex"]
@@ -121,11 +121,11 @@ depends-member:
 - !private ["Ps8Hashable", "IntegerLiteralType"]
 - !private ["Ps8Hashable", "Stride"]
 - !private ["Ps8Hashable", "_DisabledRangeIndex"]
-- ["C7swiftgd5Image", "deinit"]
-- !private ["C7swiftgd5Image", "fill"]
-- !private ["C7swiftgd5Image", "get"]
-- !private ["C7swiftgd5Image", "init"]
-- !private ["C7swiftgd5Image", "set"]
+- ["C7SwiftGD5Image", "deinit"]
+- !private ["C7SwiftGD5Image", "fill"]
+- !private ["C7SwiftGD5Image", "get"]
+- !private ["C7SwiftGD5Image", "init"]
+- !private ["C7SwiftGD5Image", "set"]
 - ["Ps9Indexable", "Element"]
 - !private ["Ps9Indexable", "Iterator"]
 - !private ["Ps9Indexable", "_Element"]
@@ -162,8 +162,8 @@ depends-member:
 - !private ["Ps16MutableIndexable", "append"]
 - ["Ps16MutableIndexable", "init"]
 - ["Sq", "deinit"]
-- ["V7swiftgd5Point", "deinit"]
-- !private ["V7swiftgd5Point", "init"]
+- ["V7SwiftGD5Point", "deinit"]
+- !private ["V7SwiftGD5Point", "init"]
 - ["Ps22RandomAccessCollection", "Element"]
 - !private ["Ps22RandomAccessCollection", "Iterator"]
 - !private ["Ps22RandomAccessCollection", "_Element"]
@@ -294,7 +294,7 @@ depends-nominal:
 - !private "Vs11ClosedRange"
 - !private "Vs19ClosedRangeIterator"
 - "Ps10Collection"
-- "C7swiftgd5Color"
+- "C7SwiftGD5Color"
 - !private "Ps10Comparable"
 - "Vs20CountableClosedRange"
 - "Ps28CustomDebugStringConvertible"
@@ -305,7 +305,7 @@ depends-nominal:
 - "Ps25ExpressibleByArrayLiteral"
 - !private "Ps27ExpressibleByIntegerLiteral"
 - !private "Ps8Hashable"
-- "C7swiftgd5Image"
+- "C7SwiftGD5Image"
 - "Ps9Indexable"
 - "Ps13IndexableBase"
 - !private "Vs16IndexingIterator"
@@ -317,7 +317,7 @@ depends-nominal:
 - "Ps17MutableCollection"
 - "Ps16MutableIndexable"
 - "Sq"
-- "V7swiftgd5Point"
+- "V7SwiftGD5Point"
 - "Ps22RandomAccessCollection"
 - "Ps21RandomAccessIndexable"
 - "Ps26RangeReplaceableCollection"
@@ -367,5 +367,5 @@ depends-external:
 - "/home/honey/swift3/usr/lib/swift/linux/x86_64/Dispatch.swiftmodule"
 - "/home/honey/swift3/usr/lib/swift/dispatch/module.modulemap"
 - "/home/honey/swift3/usr/lib/swift/linux/x86_64/Glibc.swiftmodule"
-- "/home/honey/Documents/nUIKit/.build/debug/swiftgd.swiftmodule"
-interface-hash: "4d9f719d6b4d0b8c197403d16a490000"
+- "/home/honey/Documents/nUIKit/.build/debug/SwiftGD.swiftmodule"
+interface-hash: "306c36811706b2e5d6acd492454c508e"

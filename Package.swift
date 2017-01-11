@@ -6,7 +6,7 @@ let package = Package(
                  Target(name: "nUIKit")
     ],
     dependencies: [
-        .Package(url: "https://github.com/mikezucc/SwiftGD", majorVersion: 1, minor: 0)
+        .Package(url: "https://github.com/mikezucc/SwiftGD", majorVersion: 1, minor: 2)
     ],
     exclude: ["Xcode"]
 )

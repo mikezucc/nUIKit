@@ -4,13 +4,13 @@ provides-top-level:
 provides-nominal:
 provides-member:
 depends-top-level:
-- "Application"
 - "StringLiteralType"
 - "*"
-- "usleep"
-- "app"
 - "print"
+- "usleep"
 - "FloatLiteralType"
+- "app"
+- "Application"
 - "IntegerLiteralType"
 depends-member:
 - ["Ps9AnyObject", "init"]
@@ -128,5 +128,5 @@ depends-external:
 - "/home/honey/swift3/usr/lib/swift/linux/x86_64/Dispatch.swiftmodule"
 - "/home/honey/swift3/usr/lib/swift/dispatch/module.modulemap"
 - "/home/honey/swift3/usr/lib/swift/linux/x86_64/Glibc.swiftmodule"
-- "/home/honey/Documents/nUIKit/.build/debug/swiftgd.swiftmodule"
-interface-hash: "722d8def4ef4e260208866600a5f2db3"
+- "/home/honey/Documents/nUIKit/.build/debug/SwiftGD.swiftmodule"
+interface-hash: "508e5392f4bc107511ec90ee4f481206"
