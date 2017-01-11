@@ -4,14 +4,14 @@ provides-top-level:
 provides-nominal:
 provides-member:
 depends-top-level:
+- "Application"
+- "StringLiteralType"
+- "*"
+- "usleep"
+- "app"
+- "print"
 - "FloatLiteralType"
 - "IntegerLiteralType"
-- "app"
-- "*"
-- "StringLiteralType"
-- "print"
-- "usleep"
-- "Application"
 depends-member:
 - ["Ps9AnyObject", "init"]
 - ["Ps9AnyObject", "windows"]

@@ -34,12 +34,14 @@ class View {
     subviews.append(view)
   }
 
+  // for fun
+  //  self.backgroundColor = self.possibleColors[idxColors]
+  //  self.idxColors = (self.idxColors + 1) % self.possibleColors.count
+  //  self.currIdx = (self.currIdx + 10) % self.frame.width
+  //  self.frame.x = self.currIdx
+
   // subclasses of view
   func ignite() -> Image? {
-    self.backgroundColor = self.possibleColors[idxColors]
-    self.idxColors = (self.idxColors + 1) % self.possibleColors.count
-    self.currIdx = (self.currIdx + 10) % self.frame.width
-    self.frame.x = self.currIdx
     if let masterImage = Image(width: frame.width, height: frame.height) {
       masterImage.fill(from: Point(x: 0, y: 0), color: self.backgroundColor)
       for view in subviews {

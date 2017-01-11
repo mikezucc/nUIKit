@@ -6,13 +6,13 @@ provides-nominal:
 provides-member:
 - ["C6nUIKit21InitialViewController", ""]
 depends-top-level:
+- "AssignmentPrecedence"
+- "FloatLiteralType"
+- "InitialViewController"
+- "IntegerLiteralType"
+- "ViewController"
 - !private "StringLiteralType"
 - "View"
-- "AssignmentPrecedence"
-- "InitialViewController"
-- "FloatLiteralType"
-- "ViewController"
-- "IntegerLiteralType"
 depends-member:
 - ["Ps9AnyObject", "View"]
 - ["Ps9AnyObject", "ViewController"]
