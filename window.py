@@ -40,6 +40,10 @@ here = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
 
 bufferFile = os.path.join(here, identity + '.txt')
 
+# sanitize image
+memeryOpen = cv2.imread('memery.png', 1)
+cv2.imwrite('memery2.png', memeryOpen)
+
 while (loadImage):
     try:
         # capture cursor info

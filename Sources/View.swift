@@ -46,8 +46,8 @@ class View {
       masterImage.fill(from: Point(x: 0, y: 0), color: self.backgroundColor)
       for view in subviews {
         if let renderedSubview = view.ignite() {
-          let usableBoundWidth = frame.width - view.frame.x
-          let usableBoundHeight = frame.height - view.frame.y
+          let usableBoundWidth = frame.width - view.frame.x <= view.frame.width ? frame.width - view.frame.x : view.frame.width
+          let usableBoundHeight = frame.height - view.frame.y <= view.frame.height ? frame.height - view.frame.y : view.frame.height
           for x in 0...usableBoundWidth {
             for y in 0...usableBoundHeight {
               let pixelColor = renderedSubview.get(pixel: Point(x: x, y: y))
