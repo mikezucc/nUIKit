@@ -10,27 +10,24 @@ provides-member:
 - ["C6nUIKit14ViewController", "touchEnded"]
 - ["C6nUIKit14ViewController", "thisIsMyTouch"]
 depends-top-level:
-- !private "+"
-- !private "Color"
-- "View"
-- "Button"
-- "BooleanLiteralType"
-- !private "-"
-- !private "print"
-- "ViewController"
-- "Point"
-- "AssignmentPrecedence"
-- "Image"
-- !private "StringLiteralType"
 - "Bool"
+- !private "print"
+- !private "StringLiteralType"
+- "AssignmentPrecedence"
+- "ViewController"
+- "BooleanLiteralType"
+- "Point"
+- "Image"
+- !private "Color"
+- "Button"
+- "View"
 depends-member:
 - ["Ps9AnyObject", "Button"]
 - !private ["Ps9AnyObject", "Color"]
 - !private ["Ps9AnyObject", "Point"]
 - !private ["Ps9AnyObject", "backgroundColor"]
 - !private ["Ps9AnyObject", "blue"]
-- !private ["Ps9AnyObject", "frame"]
-- !private ["Ps9AnyObject", "green"]
+- !private ["Ps9AnyObject", "clickDown"]
 - !private ["Ps9AnyObject", "ignite"]
 - !private ["Ps9AnyObject", "lastTouch"]
 - !private ["Ps9AnyObject", "manualTouchOverride"]
@@ -46,7 +43,6 @@ depends-member:
 - ["Ps10Collection", "init"]
 - !private ["C7SwiftGD5Color", "blue"]
 - ["C7SwiftGD5Color", "deinit"]
-- !private ["C7SwiftGD5Color", "green"]
 - !private ["C7SwiftGD5Color", "red"]
 - !private ["Ps10Comparable", "init"]
 - ["Ps28CustomDebugStringConvertible", "init"]
@@ -83,8 +79,8 @@ depends-member:
 - !private ["Ps16TextOutputStream", "init"]
 - !private ["Ps20TextOutputStreamable", "init"]
 - !private ["C6nUIKit4View", "backgroundColor"]
+- !private ["C6nUIKit4View", "clickDown"]
 - ["C6nUIKit4View", "deinit"]
-- !private ["C6nUIKit4View", "frame"]
 - !private ["C6nUIKit4View", "ignite"]
 - ["C6nUIKit14ViewController", "Bool"]
 - ["C6nUIKit14ViewController", "Button"]
@@ -115,8 +111,6 @@ depends-member:
 - ["P10Foundation12_NSBridgable", "init"]
 - ["P10Foundation17_ObjectBridgeable", "init"]
 - ["P10Foundation21_ObjectTypeBridgeable", "init"]
-- !private ["V6nUIKit7nCGRect", "x"]
-- !private ["V6nUIKit7nCGRect", "y"]
 depends-nominal:
 - "Ps9AnyObject"
 - "Sa"
@@ -168,7 +162,6 @@ depends-nominal:
 - "P10Foundation12_NSBridgable"
 - "P10Foundation17_ObjectBridgeable"
 - "P10Foundation21_ObjectTypeBridgeable"
-- !private "V6nUIKit7nCGRect"
 depends-dynamic-lookup:
 depends-external:
 - "/home/honey/swift3/usr/lib/swift/linux/x86_64/Swift.swiftmodule"

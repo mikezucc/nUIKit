@@ -9,21 +9,22 @@ provides-member:
 - ["V6nUIKit7nCGRect", ""]
 - ["C6nUIKit4View", ""]
 depends-top-level:
-- "Image"
-- !private "..."
-- "FloatLiteralType"
-- !private "<="
-- !private "Point"
-- "Int"
-- !private "-"
-- "nCGRect"
-- "View"
 - "AssignmentPrecedence"
 - !private "+"
-- "Color"
-- "TernaryPrecedence"
-- "Array"
+- "View"
+- !private "&&"
 - "IntegerLiteralType"
+- !private "..."
+- "Image"
+- "TernaryPrecedence"
+- "Color"
+- "Point"
+- !private "<="
+- "Int"
+- "FloatLiteralType"
+- !private "-"
+- "nCGRect"
+- "Array"
 depends-member:
 - ["Ps9AnyObject", "Color"]
 - !private ["Ps9AnyObject", "Image"]
@@ -32,6 +33,7 @@ depends-member:
 - !private ["Ps9AnyObject", "backgroundColor"]
 - ["Ps9AnyObject", "black"]
 - ["Ps9AnyObject", "blue"]
+- !private ["Ps9AnyObject", "clickDown"]
 - !private ["Ps9AnyObject", "fill"]
 - !private ["Ps9AnyObject", "frame"]
 - !private ["Ps9AnyObject", "get"]
@@ -175,6 +177,8 @@ depends-member:
 - ["Sq", "deinit"]
 - ["V7SwiftGD5Point", "deinit"]
 - !private ["V7SwiftGD5Point", "init"]
+- !private ["V7SwiftGD5Point", "x"]
+- !private ["V7SwiftGD5Point", "y"]
 - ["Ps22RandomAccessCollection", "Element"]
 - !private ["Ps22RandomAccessCollection", "Iterator"]
 - !private ["Ps22RandomAccessCollection", "_Element"]
@@ -212,10 +216,11 @@ depends-member:
 - ["C6nUIKit4View", "Color"]
 - ["C6nUIKit4View", "Image"]
 - ["C6nUIKit4View", "Int"]
-- !private ["C6nUIKit4View", "Point"]
+- ["C6nUIKit4View", "Point"]
 - ["C6nUIKit4View", "View"]
 - ["C6nUIKit4View", "addSubview"]
 - ["C6nUIKit4View", "backgroundColor"]
+- ["C6nUIKit4View", "clickDown"]
 - ["C6nUIKit4View", "currIdx"]
 - ["C6nUIKit4View", "deinit"]
 - ["C6nUIKit4View", "frame"]
@@ -388,4 +393,4 @@ depends-external:
 - "/home/honey/swift3/usr/lib/swift/dispatch/module.modulemap"
 - "/home/honey/swift3/usr/lib/swift/linux/x86_64/Glibc.swiftmodule"
 - "/home/honey/Documents/nUIKit/.build/debug/SwiftGD.swiftmodule"
-interface-hash: "306c36811706b2e5d6acd492454c508e"
+interface-hash: "a0343c52d56488620d6570b7aa185406"

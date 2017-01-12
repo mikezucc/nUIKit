@@ -31,15 +31,16 @@ extension ViewController {
   func touchBegan(point: Point) {
     print("touch began")
     self.lastTouch = Point(x: point.x, y: point.y)
-    self.view?.backgroundColor = Color.green
+    //self.view?.backgroundColor = Color.green
+    self.view?.clickDown(point: point)
   }
 
   func touchMoved(point: Point) {
-    guard let view = self.view else {
-      return
-    }
-    view.frame.x = view.frame.x + (point.x - lastTouch.x)
-    view.frame.y = view.frame.y + (point.y - lastTouch.y)
+    //guard let view = self.view else {
+    //  return
+    //}
+    //view.frame.x = view.frame.x + (point.x - lastTouch.x)
+    //view.frame.y = view.frame.y + (point.y - lastTouch.y)
     self.lastTouch = Point(x: point.x, y: point.y)
     self.view?.backgroundColor = Color.red
   }

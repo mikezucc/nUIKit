@@ -62,4 +62,12 @@ class View {
     return nil
   }
 
+  func clickDown(point: Point) {
+    for view in subviews {
+      if view.frame.x <= point.x && view.frame.y <= point.y && point.x  <= view.frame.width + view.frame.x && point.y <= view.frame.height + view.frame.y {
+        view.clickDown(point: point)
+      }
+    }
+  }
+
 }
