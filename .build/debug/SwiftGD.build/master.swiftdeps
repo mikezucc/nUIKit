@@ -1,5 +1,0 @@
-version: "Swift version 3.0.2 (swift-3.0.2-RELEASE)"
-options: "5c3155444e73f1303991913bcfaea1aa"
-build_time: [537492285, 645141000]
-inputs:
-  "/home/honey/Documents/nUIKit/Packages/SwiftGD-1.2.0/Sources/SwiftGD.swift": [537479185, 0]

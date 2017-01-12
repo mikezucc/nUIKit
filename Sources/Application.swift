@@ -11,7 +11,7 @@ class Application {
 
   var windows = [String: Window]()
 
-  let windowSize = nCGRect(x:0, y:0, width: 500, height: 500)
+  let windowSize = nCGRect(x:0, y:0, width: 800, height: 600)
 
   init?(name: String) {
     // default root window
