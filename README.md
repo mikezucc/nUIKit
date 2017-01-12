@@ -3,9 +3,9 @@ UIKit for Swift 3 on Linux
 
 Dependencies:
 
-Python 2.7 plus random packages
+1. Python 2.7 plus random packages
 
-https://swift.org/download/ or https://github.com/apple/swift
+2. https://swift.org/download/ or https://github.com/apple/swift
 
 In terminal, `nano ~/.bashrc` and paste at the end `export PATH=~/swift3/usr/bin/:"${PATH}" in pwd first`. Make sure to copy the Swift 3 directory to `~/` first and then rename the top level folder to swift3
 
@@ -13,11 +13,11 @@ If you have trouble, go to the Linux section on here https://swift.org/download/
 
 If you get SwiftGD faults when trying to read local files, i.e. images, please run this in top level `sudo chmod -R +r *` and also in the top level of your swift3 dir
 
-https://github.com/twostraws/SwiftGD
+3. https://github.com/twostraws/SwiftGD
 
 This guy needs a `sudo apt-get libgd-dev`
 
-https://github.com/Itseez/opencv
+4. https://github.com/Itseez/opencv
 
 ### OpenCV 3.0.0 install instructions
 
