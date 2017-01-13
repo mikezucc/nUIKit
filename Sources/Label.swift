@@ -23,13 +23,6 @@ class Label: View {
     self.frame = frame
   }
 
-  override func ignite() -> Image? {
-    guard let _ = internalText else {
-      return nil
-    }
-    return super.ignite()
-  }
-
   func setText(text: String) {
     if text == self.internalText {
       print("Using same label cache")
@@ -40,9 +33,11 @@ class Label: View {
     var offset = 0
     for index in text.characters.indices {
       let char = String(text[index])
+      print("\tRendering \(char)")
       if let image = Image(width: FontLarge.fontWidth, height: FontLarge.fontHeight) {
         image.fill(from: Point(x: 0, y: 0), color: Color.white)
         if let fontImage = FontLarge.font.cache[char] {
+          print("\tUsing font image \(fontImage)")
           let glyph = Glyph(glyph: fontImage, frame: nCGRect(x: offset * FontLarge.fontWidth, y: 0, width: FontLarge.fontWidth, height: FontLarge.fontHeight))
           addSubview(view: glyph)
           offset = offset + 1

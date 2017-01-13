@@ -41,7 +41,7 @@ class Button: View {
     } else {
       self.currentState = ButtonStates.Default
     }
-    print("attempting to render button")
+    //print("attempting to render button")
     let resizedImage = self.images?[self.currentState]?.resizedTo(width: self.frame.width, height: self.frame.height)
     return resizedImage
   }

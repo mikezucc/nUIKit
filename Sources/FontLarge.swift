@@ -30,11 +30,12 @@ class FontLarge {
       print("\t Character \(chara) with \(index)")
       let fontSpriteSlice = sprite[index...(index + 128)]
       if let image = Image(width: FontLarge.fontWidth, height: FontLarge.fontHeight) {
+        image.fill(from: Point(x: 0, y: 0), color: Color.white)
         var idx = 0
         for pix in fontSpriteSlice {
           print("\tWriting for \(idx) with \(pix)")
           if pix {
-            image.set(pixel: Point(x: FontLarge.fontWidth * (idx % FontLarge.fontWidth), y: FontLarge.fontHeight * (idx % FontLarge.fontHeight)), to: Color.green)
+            image.set(pixel: Point(x: (idx % FontLarge.fontWidth), y: Int(idx / FontLarge.fontHeight) ), to: Color.green)
           }
           idx = idx + 1
         }
@@ -104,8 +105,7 @@ class FontLarge {
     let spriteBuffa = currentDirectory.appendingPathComponent("utf8.txt")
     do {
       let pointerInfo = try String(contentsOf: spriteBuffa, encoding: String.Encoding.utf8)
-      print("\t pointer info \(pointerInfo)")
-      return pointerInfo.components(separatedBy: ",").flatMap({ Bool($0) ?? false })
+      return pointerInfo.components(separatedBy: ",").flatMap({ $0.contains("1") })
     } catch {
       print("\tFailed to open the utf8 sprite file")
     }
