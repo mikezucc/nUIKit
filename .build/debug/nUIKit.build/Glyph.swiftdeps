@@ -1,0 +1,104 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Glyph"
+provides-nominal:
+- "C6nUIKit5Glyph"
+provides-member:
+- ["C6nUIKit5Glyph", ""]
+depends-top-level:
+- "Image"
+- "View"
+- !private "StringLiteralType"
+- "Glyph"
+- !private "IntegerLiteralType"
+- "AssignmentPrecedence"
+- "nCGRect"
+- !private "FloatLiteralType"
+depends-member:
+- !private ["Ps9AnyObject", "frame"]
+- ["Ps9AnyObject", "glyph"]
+- ["Ps9AnyObject", "ignite"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", ""]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- ["C6nUIKit5Glyph", "Image"]
+- ["C6nUIKit5Glyph", "deinit"]
+- !private ["C6nUIKit5Glyph", "frame"]
+- ["C6nUIKit5Glyph", "glyph"]
+- ["C6nUIKit5Glyph", "ignite"]
+- ["C6nUIKit5Glyph", "init"]
+- ["C6nUIKit5Glyph", "nCGRect"]
+- ["C7SwiftGD5Image", "deinit"]
+- ["Si", "deinit"]
+- ["Os5Never", "deinit"]
+- ["Sq", "deinit"]
+- ["Vs12StaticString", "deinit"]
+- !private ["Vs12StaticString", "init"]
+- ["Su", "deinit"]
+- ["C6nUIKit4View", "Image"]
+- ["C6nUIKit4View", "deinit"]
+- !private ["C6nUIKit4View", "frame"]
+- ["C6nUIKit4View", "glyph"]
+- ["C6nUIKit4View", "ignite"]
+- ["C6nUIKit4View", "init"]
+- ["C6nUIKit4View", "nCGRect"]
+- ["C6nUIKit4View", ""]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- ["V6nUIKit7nCGRect", "deinit"]
+- !private ["V6nUIKit7nCGRect", "height"]
+- !private ["V6nUIKit7nCGRect", "width"]
+- !private ["V6nUIKit7nCGRect", "x"]
+- !private ["V6nUIKit7nCGRect", "y"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "Ps28CustomDebugStringConvertible"
+- !private "Ps17CustomReflectable"
+- !private "Ps23CustomStringConvertible"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- "C6nUIKit5Glyph"
+- "C7SwiftGD5Image"
+- "Si"
+- "Os5Never"
+- "Sq"
+- "Vs12StaticString"
+- "Su"
+- "C6nUIKit4View"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- "V6nUIKit7nCGRect"
+depends-dynamic-lookup:
+depends-external:
+- "/home/honey/swift3/usr/lib/swift/linux/x86_64/Swift.swiftmodule"
+- "/home/honey/swift3/usr/lib/swift/shims/Visibility.h"
+- "/home/honey/swift3/usr/lib/swift/shims/SwiftStdint.h"
+- "/home/honey/swift3/usr/lib/swift/shims/UnicodeShims.h"
+- "/home/honey/swift3/usr/lib/swift/shims/SwiftStddef.h"
+- "/home/honey/swift3/usr/lib/swift/shims/LibcShims.h"
+- "/home/honey/swift3/usr/lib/swift/shims/RuntimeStubs.h"
+- "/home/honey/swift3/usr/lib/swift/shims/RuntimeShims.h"
+- "/home/honey/swift3/usr/lib/swift/shims/RefCount.h"
+- "/home/honey/swift3/usr/lib/swift/shims/HeapObject.h"
+- "/home/honey/swift3/usr/lib/swift/shims/GlobalObjects.h"
+- "/home/honey/swift3/usr/lib/swift/shims/FoundationShims.h"
+- "/home/honey/swift3/usr/lib/swift/shims/DispatchShims.h"
+- "/home/honey/swift3/usr/lib/swift/shims/CoreFoundationShims.h"
+- "/home/honey/Documents/nUIKit/Packages/Cgd-0.3.0/module.modulemap"
+- "/home/honey/swift3/usr/lib/swift/linux/x86_64/glibc.modulemap"
+- "/home/honey/swift3/usr/lib/swift/shims/module.modulemap"
+- "/home/honey/swift3/usr/lib/swift/linux/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/home/honey/swift3/usr/lib/swift/linux/x86_64/Foundation.swiftmodule"
+- "/home/honey/swift3/usr/lib/swift/linux/x86_64/Dispatch.swiftmodule"
+- "/home/honey/swift3/usr/lib/swift/dispatch/module.modulemap"
+- "/home/honey/swift3/usr/lib/swift/linux/x86_64/Glibc.swiftmodule"
+- "/home/honey/Documents/nUIKit/.build/debug/SwiftGD.swiftmodule"
+interface-hash: "1cb836c5b68cd330667257282a81e5a7"

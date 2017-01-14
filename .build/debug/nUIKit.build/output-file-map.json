@@ -1,0 +1,65 @@
+{
+  "": {
+    "swift-dependencies": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/master.swiftdeps"
+  },
+  "/home/honey/Documents/nUIKit/Sources/Label.swift": {
+    "dependencies": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Label.d",
+    "object": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Label.swift.o",
+    "swiftmodule": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Label~partial.swiftmodule",
+    "swift-dependencies": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Label.swiftdeps"
+  },
+  "/home/honey/Documents/nUIKit/Sources/FontLarge.swift": {
+    "dependencies": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/FontLarge.d",
+    "object": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/FontLarge.swift.o",
+    "swiftmodule": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/FontLarge~partial.swiftmodule",
+    "swift-dependencies": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/FontLarge.swiftdeps"
+  },
+  "/home/honey/Documents/nUIKit/Sources/Application.swift": {
+    "dependencies": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Application.d",
+    "object": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Application.swift.o",
+    "swiftmodule": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Application~partial.swiftmodule",
+    "swift-dependencies": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Application.swiftdeps"
+  },
+  "/home/honey/Documents/nUIKit/Sources/Glyph.swift": {
+    "dependencies": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Glyph.d",
+    "object": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Glyph.swift.o",
+    "swiftmodule": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Glyph~partial.swiftmodule",
+    "swift-dependencies": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Glyph.swiftdeps"
+  },
+  "/home/honey/Documents/nUIKit/Sources/ViewController.swift": {
+    "dependencies": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/ViewController.d",
+    "object": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/ViewController.swift.o",
+    "swiftmodule": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/ViewController~partial.swiftmodule",
+    "swift-dependencies": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/ViewController.swiftdeps"
+  },
+  "/home/honey/Documents/nUIKit/Sources/View.swift": {
+    "dependencies": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/View.d",
+    "object": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/View.swift.o",
+    "swiftmodule": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/View~partial.swiftmodule",
+    "swift-dependencies": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/View.swiftdeps"
+  },
+  "/home/honey/Documents/nUIKit/Sources/InitialViewController.swift": {
+    "dependencies": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/InitialViewController.d",
+    "object": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/InitialViewController.swift.o",
+    "swiftmodule": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/InitialViewController~partial.swiftmodule",
+    "swift-dependencies": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/InitialViewController.swiftdeps"
+  },
+  "/home/honey/Documents/nUIKit/Sources/Button.swift": {
+    "dependencies": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Button.d",
+    "object": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Button.swift.o",
+    "swiftmodule": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Button~partial.swiftmodule",
+    "swift-dependencies": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Button.swiftdeps"
+  },
+  "/home/honey/Documents/nUIKit/Sources/Window.swift": {
+    "dependencies": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Window.d",
+    "object": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Window.swift.o",
+    "swiftmodule": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Window~partial.swiftmodule",
+    "swift-dependencies": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Window.swiftdeps"
+  },
+  "/home/honey/Documents/nUIKit/Sources/main.swift": {
+    "dependencies": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/main.d",
+    "object": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/main.swift.o",
+    "swiftmodule": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/main~partial.swiftmodule",
+    "swift-dependencies": "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/main.swiftdeps"
+  }
+}

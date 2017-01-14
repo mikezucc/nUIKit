@@ -10,28 +10,22 @@ class InitialViewController: ViewController {
   var stringyLabel: Label?
 
   init() {
-    super.init(view: View(x: 0, y: 0, width: 800, height: 600))
+    super.init(view: View(x: 0, y: 0, width: 300, height: 300))
     guard let _ = self.view else {
       return
     }
     // run some default code here
-    self.createButton(defaultPath: "UI/normal.png", downPath: "UI/highlighted.png", frame: nCGRect(x: 50, y: 50, width: 150, height: 50))
+    self.createCalculatorKeypad(defaultPath: "UI/calc.jpg", downPath: "UI/calc.jpg", frame: nCGRect(x: 50, y: 100, width: 200, height: 200))
 
     // create some label
-    let label = Label(backgroundColor: Color.white, fontColor: Color.black, fontSize: FontSize.large, frame: nCGRect(x: 20, y: 200, width: 100, height: 200))
-    label.setText(text: "Memes")
+    let label = Label(backgroundColor: Color.white, fontColor: Color.black, fontSize: FontSize.large, frame: nCGRect(x: 20, y: 20, width: 100, height: 50))
+    label.setText(text: "TuneIn")
     self.view?.addSubview(view: label)
     self.stringyLabel = label
 
-    //self.createUI(path: "UI/tab.jpg", frame:  nCGRect(x: 0, y: view.frame.height-50, width: view.frame.width, height: 50))
-    //self.createUI(path: "UI/home.jpg", frame:  nCGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height-50))
-    //self.createUI(path: "UI/profile.jpg", frame:  nCGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height-50))
-    //self.createUI(path: "UI/browse.jpg", frame:  nCGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height-50))
-    //self.createUI(path: "UI/search.jpg", frame: nCGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height-50))
-    //self.createUI(path: "UI/record.jpg", frame:  nCGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height-50))
   }
 
-  func createButton(defaultPath: String, downPath: String, frame: nCGRect) {
+  func createCalculatorKeypad(defaultPath: String, downPath: String, frame: nCGRect) {
     let currentDirectory = URL(fileURLWithPath: FileManager().currentDirectoryPath)
     let buttonDefaultFile = currentDirectory.appendingPathComponent(defaultPath)
     let buttonDownFile = currentDirectory.appendingPathComponent(downPath)
@@ -47,7 +41,8 @@ class InitialViewController: ViewController {
       self.tappyButton = butt
 
       butt.clickDownActions = [{ (point: Point, button: Button?) -> Void in
-        print("\n\n\n\n\n\n\n\nCLICKED THIS LOL\n\n\n\n\n\n\n\n\n")
+        let rando = Int(random())
+        self.stringyLabel?.setText(text: "\(rando)")
       }]
     } catch {
       print("fokken hell")

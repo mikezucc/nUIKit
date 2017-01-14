@@ -1,0 +1,14 @@
+version: "Swift version 3.0.2 (swift-3.0.2-RELEASE)"
+options: "b929d477720c2875f7c04f21ccf4fd41"
+build_time: [537663808, 836573000]
+inputs:
+  "/home/honey/Documents/nUIKit/Sources/Label.swift": [537663441, 0]
+  "/home/honey/Documents/nUIKit/Sources/FontLarge.swift": [537663468, 0]
+  "/home/honey/Documents/nUIKit/Sources/Application.swift": [537663481, 0]
+  "/home/honey/Documents/nUIKit/Sources/Glyph.swift": [537661345, 0]
+  "/home/honey/Documents/nUIKit/Sources/ViewController.swift": [537500829, 0]
+  "/home/honey/Documents/nUIKit/Sources/View.swift": [537573755, 0]
+  "/home/honey/Documents/nUIKit/Sources/InitialViewController.swift": [537663778, 0]
+  "/home/honey/Documents/nUIKit/Sources/Button.swift": [537663252, 0]
+  "/home/honey/Documents/nUIKit/Sources/Window.swift": [537514143, 0]
+  "/home/honey/Documents/nUIKit/Sources/main.swift": [537476457, 0]

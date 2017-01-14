@@ -23,6 +23,10 @@ class Label: View {
     self.frame = frame
   }
 
+  override func ignite() -> Image? {
+    return super.ignite()?.resizedTo(width: frame.width * 2, height: frame.height * 2)
+  }
+
   func setText(text: String) {
     if text == self.internalText {
       print("Using same label cache")
@@ -41,6 +45,8 @@ class Label: View {
           let glyph = Glyph(glyph: fontImage, frame: nCGRect(x: offset * FontLarge.fontWidth, y: 0, width: FontLarge.fontWidth, height: FontLarge.fontHeight))
           addSubview(view: glyph)
           offset = offset + 1
+        } else {
+          print("Failed to find glyph")
         }
       }
     }

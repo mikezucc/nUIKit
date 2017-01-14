@@ -35,7 +35,7 @@ class FontLarge {
         for pix in fontSpriteSlice {
           print("\tWriting for \(idx) with \(pix)")
           if pix {
-            image.set(pixel: Point(x: (idx % FontLarge.fontWidth), y: Int(idx / FontLarge.fontHeight) ), to: Color.green)
+            image.set(pixel: Point(x: (idx % FontLarge.fontWidth), y: Int(idx / FontLarge.fontHeight) ), to: Color.black)
           }
           idx = idx + 1
         }
@@ -46,6 +46,16 @@ class FontLarge {
   }
 
   static let fontSpriteIndex: [String: Int] = [
+    "0": 48 * 128,
+    "1": 49 * 128,
+    "2": 50 * 128,
+    "3": 51 * 128,
+    "4": 52 * 128,
+    "5": 53 * 128,
+    "6": 54 * 128,
+    "7": 55 * 128,
+    "8": 56 * 128,
+    "9": 57 * 128,
     "A": 65 * 128,
     "B": 66 * 128,
     "C": 67 * 128,

@@ -1,0 +1,47 @@
+client:
+  name: swift-build
+tools: {}
+targets:
+  "test": ["<SwiftGD.module>","<nUIKit.module>","<nUIKit.exe>"]
+  "main": ["<SwiftGD.module>","<nUIKit.module>","<nUIKit.exe>"]
+default: "main"
+commands: 
+  "<SwiftGD.module>":
+    tool: swift-compiler
+    executable: "/home/honey/swift3/usr/bin/swiftc"
+    module-name: "SwiftGD"
+    module-output-path: "/home/honey/Documents/nUIKit/.build/debug/SwiftGD.swiftmodule"
+    inputs: ["<Cgd.module>"]
+    outputs: ["<SwiftGD.module>","/home/honey/Documents/nUIKit/.build/debug/SwiftGD.build/SwiftGD.swift.o"]
+    import-paths: ["/home/honey/Documents/nUIKit/.build/debug"]
+    temps-path: "/home/honey/Documents/nUIKit/.build/debug/SwiftGD.build"
+    objects: ["/home/honey/Documents/nUIKit/.build/debug/SwiftGD.build/SwiftGD.swift.o"]
+    other-args: ["-j8","-D","SWIFT_PACKAGE","-Onone","-g","-enable-testing","-Xcc","-fmodule-map-file=/home/honey/Documents/nUIKit/Packages/Cgd-0.3.0/module.modulemap","-Xcc","-I/usr/include","-L/usr/lib/x86_64-linux-gnu","-lgd","-module-cache-path","/home/honey/Documents/nUIKit/.build/debug/ModuleCache"]
+    sources: ["/home/honey/Documents/nUIKit/Packages/SwiftGD-1.2.0/Sources/SwiftGD.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: "8"
+
+  "<nUIKit.module>":
+    tool: swift-compiler
+    executable: "/home/honey/swift3/usr/bin/swiftc"
+    module-name: "nUIKit"
+    module-output-path: "/home/honey/Documents/nUIKit/.build/debug/nUIKit.swiftmodule"
+    inputs: ["<Cgd.module>","<SwiftGD.module>"]
+    outputs: ["<nUIKit.module>","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Label.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/FontLarge.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Application.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Glyph.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/ViewController.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/View.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/InitialViewController.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Button.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Window.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/main.swift.o"]
+    import-paths: ["/home/honey/Documents/nUIKit/.build/debug"]
+    temps-path: "/home/honey/Documents/nUIKit/.build/debug/nUIKit.build"
+    objects: ["/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Label.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/FontLarge.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Application.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Glyph.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/ViewController.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/View.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/InitialViewController.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Button.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Window.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/main.swift.o"]
+    other-args: ["-j8","-D","SWIFT_PACKAGE","-Onone","-g","-enable-testing","-Xcc","-fmodule-map-file=/home/honey/Documents/nUIKit/Packages/Cgd-0.3.0/module.modulemap","-Xcc","-I/usr/include","-L/usr/lib/x86_64-linux-gnu","-lgd","-module-cache-path","/home/honey/Documents/nUIKit/.build/debug/ModuleCache"]
+    sources: ["/home/honey/Documents/nUIKit/Sources/Label.swift","/home/honey/Documents/nUIKit/Sources/FontLarge.swift","/home/honey/Documents/nUIKit/Sources/Application.swift","/home/honey/Documents/nUIKit/Sources/Glyph.swift","/home/honey/Documents/nUIKit/Sources/ViewController.swift","/home/honey/Documents/nUIKit/Sources/View.swift","/home/honey/Documents/nUIKit/Sources/InitialViewController.swift","/home/honey/Documents/nUIKit/Sources/Button.swift","/home/honey/Documents/nUIKit/Sources/Window.swift","/home/honey/Documents/nUIKit/Sources/main.swift"]
+    is-library: false
+    enable-whole-module-optimization: false
+    num-threads: "8"
+
+  "<nUIKit.exe>":
+    tool: shell
+    description: "Linking ./.build/debug/nUIKit"
+    inputs: ["/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Label.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/FontLarge.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Application.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Glyph.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/ViewController.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/View.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/InitialViewController.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Button.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Window.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/main.swift.o","/home/honey/Documents/nUIKit/.build/debug/SwiftGD.build/SwiftGD.swift.o"]
+    outputs: ["<nUIKit.exe>","/home/honey/Documents/nUIKit/.build/debug/nUIKit"]
+    args: ["/home/honey/swift3/usr/bin/swiftc","-Xlinker","-rpath=$ORIGIN","-g","-L/home/honey/Documents/nUIKit/.build/debug","-o","/home/honey/Documents/nUIKit/.build/debug/nUIKit","-emit-executable","-Xcc","-I/usr/include","-L/usr/lib/x86_64-linux-gnu","-lgd","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Label.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/FontLarge.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Application.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Glyph.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/ViewController.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/View.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/InitialViewController.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Button.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/Window.swift.o","/home/honey/Documents/nUIKit/.build/debug/nUIKit.build/main.swift.o","/home/honey/Documents/nUIKit/.build/debug/SwiftGD.build/SwiftGD.swift.o"]
+
